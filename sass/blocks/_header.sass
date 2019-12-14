@@ -1,0 +1,73 @@
+.header
+    background: url(../img/header-bg.jpg) no-repeat center
+    background-size: cover
+    height: 100vh
+    width: 100%
+    &__menu
+        display: flex
+        height: 100vh
+        flex-direction: column
+        justify-content: space-between
+    &__bottom
+        display: flex
+        justify-content: space-between
+        margin-bottom: 22px
+    &__logo
+        text-align: center
+    &__copyright
+        font-family: 'Futura PT Demi'
+        font-size: 15px
+        color: #ffffff
+    &__social
+        &-icon
+            margin-left: 23px
+        &-svg 
+            &:hover
+                fill: #961818
+.menu    
+    &__nav
+        padding-top: 22px 
+        display: flex   
+        justify-content: space-between
+    &__link
+        font-family: 'Futura PT Demi'
+        font-size: 15px
+        color: #ffffff
+    &__phones
+        position: relative
+        &::before
+            content: ''
+            height: 14px
+            width: 14px
+            background-image: url(../img/phone_red_icon.svg)
+            position: absolute
+            top: 2px
+            left: -20px 
+    &__phone
+        display: block
+        font-family: 'Futura PT Book'
+        font-size: 15px
+        color: #ffffff
+        margin-bottom: 5px
+    
+@media (max-width: 378px)
+    .header
+        &__logo
+            width: 240px
+            margin: 0 auto    
+        &__copyright
+            display: none
+        &__social
+            margin: 0 auto
+            &-icon
+                &:first-child
+                    margin-left: 0
+    .menu
+        &__link
+            display: none
+        &__phones
+            margin: 0 auto
+            
+a svg
+    &:hover
+        fill: #961818    
